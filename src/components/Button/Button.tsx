@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
+import styles from './Button.module.css'
 
-export interface ButtonProps {
-  label: string
+interface ButtonProps {
+  variant: string
+  children: string
+  onClick?: () => void
 }
 
-const Button = ({ label }: ButtonProps) => {
-  return <button>{label}</button>
+const Button = ({ variant, children, onClick }: ButtonProps) => {
+  return (
+    <button className={styles[variant]} onClick={onClick}>
+      {children}
+    </button>
+  )
 }
 
 export default Button
