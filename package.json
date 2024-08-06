@@ -50,5 +50,6 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "postcss": "^8.4.40"
-  }
+  },
+  "packageManager": "yarn@4.4.0"
 }
